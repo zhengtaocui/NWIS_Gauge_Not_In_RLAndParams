@@ -1,0 +1,7 @@
+NWM v2.0
+start date and time: 2019-04-16T03:30:00Z
+current date and time: 2019-04-16T03:30:00Z
+Count of script executions: 1234
+Gage ID                 Count
+0192456033               789
+0101024349               234
