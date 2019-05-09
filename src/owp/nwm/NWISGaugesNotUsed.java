@@ -44,7 +44,7 @@ public class NWISGaugesNotUsed {
 		   scan.findInLine("(NWM v\\d+(\\.\\d+)+)");
 		   NWMVersion = scan.match().group(1);
 		   scan.nextLine();
-		   scan.findInLine("start date and time: (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+Z)");
+		   scan.findInLine("start date and time: (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z)");
 		   
 //		   startDateTime = new SimpleDateFormat("yyyy/MM/dd HH:mm:SS").parse( scan.match().group(1) ).toInstant();
 	       startDateTime = Instant.parse(scan.match().group(1));	   
@@ -52,7 +52,7 @@ public class NWISGaugesNotUsed {
 		   System.out.println(NWMVersion);
 		   System.out.println(startDateTime);
 		   scan.nextLine();
-		   scan.findInLine("current date and time: (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+Z)");
+		   scan.findInLine("current date and time: (\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z)");
 		   System.out.println(scan.match().group(1));
 		   
 		   scan.nextLine();
