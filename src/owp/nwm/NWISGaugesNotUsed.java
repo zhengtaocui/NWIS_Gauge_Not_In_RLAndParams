@@ -32,7 +32,7 @@ public class NWISGaugesNotUsed {
 		if ( ! Files.exists( path ) )
 		{
 			executionCount = new Long(0);
-			NWMVersion = "NWM v1.2.4";
+			NWMVersion = "NWM v2.0.4";
 			startDateTime = Instant.now();
 			
 			System.out.println("file not found!");
